@@ -3,19 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github</title>
+    <title>GitHub Users</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      h1 {
+        margin: 10px 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      select {
+        margin: 15px 0;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+      }
+
+      #top {
+        margin-top: 20px;
+        text-align: left;
+      }
+
+      button.logout-btn {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #333;
+        background-color: #f4f4f9;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      button.logout-btn:hover {
+        background-color: #ddd;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome Yash</h1>
-    <h1>Top 10 GitHub Users</h1>
-    <button class="btn" onclick="fetchdata()">Fetch GitHub Users</button>
-    <select name="" id="">
+    <div class="container">
+      <h1>Welcome, Yash</h1>
+      <h1>Top 10 GitHub Users</h1>
+      <button class="btn" onclick="fetchdata()">Fetch GitHub Users</button>
+      
+      <select name="sort" id="sort">
         <option value="">Default</option>
         <option value="Alphabetical">Alphabetical</option>
-    </select>
-    
-    <div id="top"></div>
-    <button onclick="logout()">Logout</button>
+      </select>
+      
+      <div id="top"></div>
+      
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
+
